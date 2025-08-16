@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="celebrate-root">
+  <!-- Stage A: intro with button -->
+  <div id="lightsScreen" class="lights-screen">
+    <h1 class="lights-title">Light Up My Life💎</h1>
+    <button id="lightsBtn" class="glow-btn" type="button">Turn the Lights On ✨</button>
+  </div>
+
+  <!-- Stage B: 1-second hold (text only, bg color shifts) -->
+  <div id="holdScreen" class="hold-screen" aria-hidden="true">
+    <h1 class="lights-title">Light Up My Life💎</h1>
+  </div>
+
+  <!-- Stage C: final celebration scene -->
+  <div id="finalScene" class="final-scene" aria-hidden="true">
+    <!-- falling confetti -->
+    <div id="confettiWrap" class="confetti-wrap"></div>
+
+    <!-- floating balloons (pure CSS) -->
+    <div class="balloons">
+      <div class="balloon b1">🎈</div>
+      <div class="balloon b2">🎈</div>
+      <div class="balloon b3">🎈</div>
+      <div class="balloon b4">🎈</div>
+    </div>
+
+    <!-- message -->
+    <div class="final-message">
+      <h2>Happiest Birthday, My Lovee ❤</h2>
+      <p>I am forever grateful for having uh in my life akkaa🥹💕</p>
+      <p>Thanks for existing 🦋 and supporting me in each nd every situation I wanted uh🫶🫂</p>
+      <p>You have been there for me in all my toughest and hardest situation and stood for me in my side as my mother 🥺🤌🏻❤‍🩹🧿 ILY🤍</p>
+      <p>Even though I'm younger than uh I'll be there for for uh in every situation don't ever never forget that 🧬💝 I'm Just a call away from uh 🤙 📱 I'll be there with you </p>
+      <p>On ur special day I'm supposed to be there with uh but for some situations I can't be presented but you are always my ONE dearr🫀👀 Senior✖ Akkaaa✔ </p>
+      <p>In the absence of my presence I made this for uh Missing uh badly my onee😭🥺</p>
+      <p>Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Luv U Sooooooooooooooo muchhhhhhhhhhhh akkkkkaaaaaaaaaaa 🫂💋</p>
+      <p>U r my forever Akkaaa❤‍🩹🧬Devudu icchina varam eh nuvvu naku💎🎀</p>
+      <p>A small surprise from ur chelliii🥹🫀👀</p>
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/celebrate.js') }}"></script>
+{% endblock %}

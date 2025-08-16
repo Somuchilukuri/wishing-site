@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page page-cake">
+  <h1 class="large-title">Let's Cut the Cake!🤍🎂</h1>
+
+  <div class="cake-area">
+    <img id="cakeImg"
+         src="/static/assets/images/cake1.jpg"
+         class="cake"
+         alt="cake"
+         onclick="cutCake()" />
+  </div>
+
+  <div id="cakeBtnArea" class="controls" style="display:none;">
+    <a class="btn" href="/celebrate">Next Page 👉</a>
+  </div>
+
+  <!-- optional confetti canvas (no styling needed) -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+</section>
+
+<!-- small config (your exact file names) -->
+<script>
+  window.CAKE = {
+    intact: "/static/assets/images/cake1.jpg",
+    cut:    "/static/assets/images/cake2.jpg"
+  };
+</script>
+
+<!-- tiny confetti lib (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="{{ url_for('static', filename='js/cake.js') }}"></script>
+{% endblock %}

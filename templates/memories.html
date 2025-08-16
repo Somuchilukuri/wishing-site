@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page page-memory">
+  <h1 class="large-title">Mirror of Memories💕</h1>
+
+  <!-- Locked mirror view -->
+  <div id="unlock" class="mirror" onclick="unlockMemories()">
+    <div class="heart">💗</div>
+    <div class="prompt">Click to unlock memories</div>
+  </div>
+
+  <!-- Carousel view -->
+  <div id="carouselWrap" class="carousel-wrap hidden">
+    <div class="arrow left" onclick="shift(-1)">👈</div>
+    <div id="carousel" class="carousel"></div>
+    <div class="arrow right" onclick="shift(1)">👉</div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls hidden" id="memControls">
+    <button class="btn" onclick="downloadCurrent()">💝 Download this memory</button>
+    <a class="btn" href="/cake">Next Page 👉🏻</a>
+  </div>
+</section>
+
+<!-- Images and captions -->
+<script>
+  window.MEM_IMAGES = [
+    "/static/assets/images/memory1.jpg",
+    "/static/assets/images/memory2.jpg",
+    "/static/assets/images/memory3.jpg",
+    "/static/assets/images/memory4.jpg",
+    "/static/assets/images/memory5.jpg",
+    "/static/assets/images/memory6.jpg",
+    "/static/assets/images/memory7.jpg",
+    "/static/assets/images/memory8.jpg",
+    "/static/assets/images/memory9.jpg",
+    "/static/assets/images/memory10.jpg",
+    "/static/assets/images/memory11.jpg",
+    "/static/assets/images/memory12.jpg"
+  ];
+  window.MEM_CAPTIONS = [
+    "This smile... my forever favorite",
+    "Our first bouquet together",
+    "A moment we won't forget"
+  ];
+</script>
+{% endblock %}
